@@ -1,0 +1,1 @@
+const CACHE_NAME="tarkov-checklist-cache-v2";self.addEventListener("install",e=>{self.skipWaiting();});

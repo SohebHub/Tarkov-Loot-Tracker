@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarkov Checklist</title>
+</head>
+<body>
+  <div id="statsBar"></div>
+  <div id="filters">
+    <div id="typeFilter">
+      <button class="pill-toggle" data-value="all">All</button>
+      <button class="pill-toggle" data-value="quest">Quest</button>
+      <button class="pill-toggle" data-value="hideout">Hideout</button>
+      <button class="pill-toggle" data-value="both">Both</button>
+    </div>
+    <div id="statusFilter">
+      <button class="pill-toggle" data-value="all">All</button>
+      <button class="pill-toggle" data-value="todo">To do</button>
+      <button class="pill-toggle" data-value="done">Done</button>
+    </div>
+    <div id="firFilter">
+      <button class="pill-toggle" data-value="all">Any FiR</button>
+      <button class="pill-toggle" data-value="required">FiR required</button>
+      <button class="pill-toggle" data-value="not-required">FiR not required</button>
+    </div>
+    <select id="tagFilter"></select>
+    <input id="searchInput" placeholder="Search..." />
+  </div>
+  <div>
+    <button id="addItemBtn">Add</button>
+    <button id="exportBtn">Export</button>
+    <input id="importInput" type="file" accept="application/json" />
+  </div>
+  <div id="emptyState">No items yet</div>
+  <div id="cards"></div>
+
+  <div id="modalBackdrop">
+    <div>
+      <h2 id="modalTitle"></h2>
+      <label>Name <input id="itemNameInput" /></label>
+      <label>Category <select id="categorySelect">
+        <option value="quest">Quest</option>
+        <option value="hideout">Hideout</option>
+        <option value="both">Both</option>
+      </select></label>
+      <label>FiR <select id="firSelect">
+        <option value="any">Any</option>
+        <option value="required">Required</option>
+        <option value="not-required">Not required</option>
+      </select></label>
+      <label>Qty needed <input id="qtyNeededInput" type="number" /></label>
+      <label>Priority <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select></label>
+      <label>Quest name <input id="questNameInput" /></label>
+      <label>Trader <input id="traderInput" /></label>
+      <label>Module <input id="moduleInput" /></label>
+      <label><input id="craftableCheckbox" type="checkbox" /> Craftable</label>
+      <label>Craft module <input id="craftModuleInput" /></label>
+      <label>Craft level <input id="craftLevelInput" type="number" /></label>
+      <label>Craft recipe <input id="craftRecipeInput" /></label>
+      <label>Reward from quest <input id="rewardFromInput" /></label>
+      <label>Tags (comma separated) <input id="tagsInput" /></label>
+      <label>Image URL <input id="imageInput" /></label>
+      <label>Notes <textarea id="notesInput"></textarea></label>
+      <button id="saveItemBtn">Save</button>
+      <button id="deleteItemBtn">Delete</button>
+      <button id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
